@@ -119,7 +119,10 @@
     return '';
   }
 
-  var APK_URL = APK_URL_OVERRIDE || detectReleaseUrl() || LOCAL_APK;
+  /* الترتيب الأمثل: تجاوز يدوي > ملف APK المستضاف داخل الموقع (يعمل دائمًا)
+     > صفحة الإصدارات (Releases) إن وُجدت. الملف المحلي هو الأضمن لأنه
+     يُرفَع مع الموقع نفسه فلا يعتمد على إنشاء Release منفصل. */
+  var APK_URL = APK_URL_OVERRIDE || LOCAL_APK || detectReleaseUrl();
 
   (function () {
     var link = document.getElementById('apkLink');
