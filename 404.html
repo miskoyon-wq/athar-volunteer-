@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>الصفحة غير موجودة — أثر</title>
+<meta name="theme-color" content="#0B4A2E">
+<style>
+  :root{--g:#0B4A2E;--gd:#062A1B;--gold:#C9A227;--ink:#12261C;--muted:#5C6B62}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:"Segoe UI",Tahoma,system-ui,sans-serif;background:linear-gradient(160deg,#F7FAF8,#DCEAE2);color:var(--ink);min-height:100vh;display:flex;align-items:center;justify-content:center;padding:22px;text-align:center}
+  .card{background:#fff;border-radius:26px;box-shadow:0 22px 60px rgba(11,74,46,.18);max-width:440px;width:100%;padding:34px 26px}
+  .logo{width:96px;height:96px;border-radius:24px;border:2.5px solid var(--gold);background:linear-gradient(135deg,#0B4A2E,#062A1B);display:flex;align-items:center;justify-content:center;margin:0 auto}
+  .logo span{font-size:44px}
+  h1{font-size:23px;color:var(--g);margin:16px 0 8px}
+  p{font-size:14px;color:var(--muted);line-height:1.95}
+  .btn{display:block;margin-top:20px;background:linear-gradient(135deg,var(--g),var(--gd));color:#fff;text-decoration:none;padding:15px;border-radius:14px;font-size:16px;font-weight:800;box-shadow:0 8px 22px rgba(11,74,46,.28)}
+  .alt{display:inline-block;margin-top:14px;font-size:13px;color:var(--g);text-decoration:none;border-bottom:1px dashed var(--gold)}
+</style>
+</head>
+<body>
+<div class="card">
+  <div class="logo"><span>🕌</span></div>
+  <h1>الصفحة غير موجودة</h1>
+  <p>يبدو أن الرابط الذي فتحته غير صحيح أو تم نقله.<br>لا تقلق — كل شيء يعمل، ارجع للصفحة الرئيسية.</p>
+  <a class="btn" id="home" href="../">🏠 رجوع للصفحة الرئيسية</a>
+  <a class="alt" id="applink" href="../app/">🌐 افتح التطبيق مباشرة</a>
+</div>
+<script>
+  (function () {
+    /* GitHub Pages serves this file for ANY unknown path, while the browser URL
+       keeps the requested path. So we detect the site root automatically.
+
+       Three hosting shapes are supported:
+         1. Project page :  https://USER.github.io/REPO/...      → base = /REPO/
+         2. User page    :  https://USER.github.io/...           → base = /
+         3. Custom domain:  https://example.com/...              → base = /            */
+
+    var host = location.hostname;
+    var seg  = location.pathname.split('/').filter(Boolean);
+    var base = '/';
+
+    if (/\.github\.io$/i.test(host)) {
+      // A user/org page has NO repo segment (e.g. USER.github.io/app/).
+      // A project page has exactly one repo segment (e.g. USER.github.io/REPO/app/).
+      var looksLikeProject = seg.length > 0 &&
+        // never treat a known app route as the repo name
+        seg[0] !== 'app' && seg[0] !== 'download' && seg[0] !== 'assets' && seg[0] !== 'lib';
+      if (looksLikeProject) { base = '/' + seg[0] + '/'; }
+    }
+
+    var home = document.getElementById('home');
+    var app  = document.getElementById('applink');
+    if (home) home.setAttribute('href', base);
+    if (app)  app.setAttribute('href', base + 'app/');
+  })();
+</script>
+</body>
+</html>

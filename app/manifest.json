@@ -1,0 +1,38 @@
+{
+    "name": "أثر — بوابة التطوع الذكية",
+    "short_name": "أثر",
+    "start_url": ".",
+    "display": "standalone",
+    "background_color": "#0B4A2E",
+    "theme_color": "#0B4A2E",
+    "lang": "ar",
+    "dir": "rtl",
+    "categories": ["social", "productivity", "lifestyle"],
+    "description": "بوابة أثر للتطوع — مساعد ذكي يجد لك أفضل ٣ فرص تطوعية تناسبك في دقيقة.",
+    "orientation": "portrait-primary",
+    "prefer_related_applications": false,
+    "icons": [
+        {
+            "src": "icons/Icon-192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "icons/Icon-512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        },
+        {
+            "src": "icons/Icon-maskable-192.png",
+            "sizes": "192x192",
+            "type": "image/png",
+            "purpose": "maskable"
+        },
+        {
+            "src": "icons/Icon-maskable-512.png",
+            "sizes": "512x512",
+            "type": "image/png",
+            "purpose": "maskable"
+        }
+    ]
+}

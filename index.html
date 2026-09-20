@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>أثر — بوابة التطوع الذكية</title>
+<meta name="description" content="أثر — بوابة التطوع الذكية. اختر جمعيتك، تحدّث مع المرشد الذكي، واحصل على أفضل ٣ فرص تطوعية تناسبك في دقيقة.">
+<meta name="theme-color" content="#0B4A2E">
+<meta property="og:type" content="website">
+<meta property="og:title" content="أثر — بوابة التطوع الذكية">
+<meta property="og:description" content="مساعد ذكي يجد لك أفضل ٣ فرص تطوعية تناسبك في دقيقة.">
+<meta property="og:image" content="assets/icon-512.png">
+<meta property="og:locale" content="ar_SA">
+<link rel="icon" type="image/png" sizes="192x192" href="assets/icon-192.png">
+<link rel="apple-touch-icon" href="assets/icon-192.png">
+<style>
+  :root{--g:#0B4A2E;--gd:#062A1B;--gold:#C9A227;--ink:#12261C;--muted:#5C6B62;--line:#DDE8E1}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:"Segoe UI",Tahoma,system-ui,-apple-system,sans-serif;background:linear-gradient(165deg,#F7FAF8 0%,#E7F1EB 55%,#DCEAE2 100%);color:var(--ink);min-height:100vh;padding:22px 16px 40px;display:flex;justify-content:center}
+  .wrap{width:100%;max-width:560px}
+  .card{background:#fff;border-radius:28px;overflow:hidden;box-shadow:0 24px 70px rgba(11,74,46,.20)}
+  .hero{background:linear-gradient(140deg,var(--g),var(--gd));color:#fff;padding:36px 26px 32px;text-align:center;position:relative}
+  .hero:after{content:"";position:absolute;inset:0;background:radial-gradient(circle at 50% -10%,rgba(201,162,39,.26),transparent 60%);pointer-events:none}
+  .hero img{width:112px;height:112px;border-radius:26px;border:2.5px solid var(--gold);box-shadow:0 12px 30px rgba(0,0,0,.32);position:relative}
+  .hero h1{font-size:27px;margin:16px 0 6px;position:relative;letter-spacing:.2px}
+  .hero p{font-size:14px;opacity:.93;position:relative}
+  .badge{display:inline-block;margin-top:13px;background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.34);border-radius:999px;padding:5px 15px;font-size:12.5px;position:relative}
+  .body{padding:26px 24px 30px}
+  .btn{display:flex;align-items:center;justify-content:center;gap:10px;text-decoration:none;border-radius:16px;padding:17px;font-size:17px;font-weight:800;transition:transform .18s ease,box-shadow .18s ease}
+  .btn:hover{transform:translateY(-2px)}
+  .primary{background:linear-gradient(135deg,var(--g),var(--gd));color:#fff;box-shadow:0 10px 26px rgba(11,74,46,.30)}
+  .secondary{background:#fff;color:var(--g);border:2px solid var(--g);box-shadow:0 6px 18px rgba(11,74,46,.10);margin-top:12px}
+  .meta{font-size:12.5px;color:var(--muted);text-align:center;margin-top:10px}
+  h3{font-size:15.5px;color:var(--g);margin:26px 0 12px;text-align:center}
+  .feat{display:grid;gap:9px}
+  .feat div{background:#F4F9F6;border:1px solid var(--line);border-radius:13px;padding:12px 14px;font-size:13.5px;display:flex;gap:9px;align-items:flex-start}
+  .feat b{color:var(--g)}
+  .dl{margin-top:26px;border-top:1px dashed var(--line);padding-top:22px;text-align:center}
+  .dl .ver{font-size:12.5px;color:var(--muted);margin:8px 0 14px}
+  .apk{background:linear-gradient(135deg,#143f2c,#062A1B);color:#fff;box-shadow:0 10px 26px rgba(11,74,46,.28)}
+  .steps{margin-top:22px;background:#FFFDF5;border:1px solid #F0E4BE;border-radius:16px;padding:18px}
+  .steps ol{margin:10px 20px 0 0;font-size:13.5px;line-height:2}
+  .steps li{margin-bottom:2px}
+  .note{margin-top:20px;background:#F4F9F6;border-right:4px solid var(--gold);border-radius:12px;padding:14px 16px;font-size:13px;line-height:1.85}
+  .links{margin-top:20px;display:grid;gap:8px;font-size:13px}
+  .links a{color:var(--g);text-decoration:none;background:#F4F9F6;border:1px solid var(--line);border-radius:11px;padding:11px 14px;display:flex;justify-content:space-between;align-items:center}
+  .links a:hover{background:#EAF3ED}
+  .foot{text-align:center;font-size:12px;color:var(--muted);margin-top:22px;line-height:1.9}
+  .hash{font-family:ui-monospace,Consolas,monospace;font-size:11px;color:var(--muted);word-break:break-all;direction:ltr;text-align:center;margin-top:14px}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="card">
+    <div class="hero">
+      <img src="assets/icon-512.png" alt="أثر">
+      <h1>أثر — بوابة التطوع</h1>
+      <p>مساعدك الذكي للعمل التطوعي</p>
+      <div class="badge">النسخة الرسمية · v1.3.0</div>
+    </div>
+
+    <div class="body">
+      <a class="btn primary" href="app/">🌐 افتح التطبيق الآن (يعمل في المتصفح)</a>
+      <div class="meta">بدون تثبيت · يعمل فورًا على الجوال والكمبيوتر</div>
+
+      <h3>لماذا أثر؟</h3>
+      <div class="feat">
+        <div><b>◆</b><span><b>مطابقة ذكية:</b> اختر جمعيتك وتحدّث مع المرشد الذكي ليصل بك لأفضل ٣ فرص تناسبك.</span></div>
+        <div><b>◆</b><span><b>متابعة الطلبات:</b> قدّم على الفرصة وتابع حالة طلبك لحظة بلحظة.</span></div>
+        <div><b>◆</b><span><b>ساعاتك وشواراتك:</b> سجّل ساعات التطوع وشاراتك في مكان واحد.</span></div>
+        <div><b>◆</b><span><b>خصوصية كاملة:</b> يعمل دون إنترنت، وبياناتك تُخزَّن على جهازك فقط.</span></div>
+      </div>
+
+      <div class="dl">
+        <h3 style="margin-top:0">📱 نسخة الأندرويد (APK)</h3>
+        <div class="ver">v1.3.0+4 · الحجم 52.7 ميجابايت · أندرويد 6.0 فأحدث</div>
+        <a class="btn apk" href="download/">⬇️ حمّل التطبيق الآن (APK)</a>
+        <div class="meta">صفحة التحميل فيها رمز QR وخطوات التثبيت</div>
+      </div>
+
+      <div class="steps">
+        <h3 style="margin:0;text-align:right">📲 طريقة التثبيت</h3>
+        <ol>
+          <li>افتح صفحة التحميل واضغط زر التحميل.</li>
+          <li>بعد اكتمال التنزيل، افتح الملف.</li>
+          <li>إن ظهر تحذير «مصدر غير معروف» اختر <b>السماح</b> (لأنه خارج المتجر).</li>
+          <li>اضغط <b>تثبيت</b> ثم افتح التطبيق. ✅</li>
+        </ol>
+      </div>
+
+      <div class="note">
+        🔒 <b>خصوصيتك محفوظة:</b> التطبيق يعمل دون إنترنت وكل بياناتك تُخزَّن على جهازك فقط.
+        لا تسجيل إجباري، ولا جمع بيانات.
+      </div>
+
+      <div class="links">
+        <a href="privacy.html">🔐 سياسة الخصوصية <span>›</span></a>
+        <a href="download/">📦 صفحة تحميل التطبيق <span>›</span></a>
+      </div>
+
+      <div class="foot">
+        أثر — بوابة التطوع الذكية · <span dir="ltr">com.atharvolunteer.portal</span>
+      </div>
+      <div class="hash">SHA-256 (APK v1.3.0+4): e3b12f768d2eedb0602a0ec3f3562d42…</div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

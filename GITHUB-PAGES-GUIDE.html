@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<title>دليل رفع موقع أثر على GitHub Pages</title>
+<style>
+  @page{size:A4;margin:16mm 14mm}
+  :root{--g:#0B4A2E;--gd:#062A1B;--gold:#C9A227;--ink:#12261C;--muted:#5C6B62;--line:#DDE8E1}
+  *{box-sizing:border-box}
+  body{font-family:'Segoe UI',Tahoma,system-ui,sans-serif;color:var(--ink);line-height:1.95;font-size:13px;margin:0;padding:0}
+  h1{color:var(--g);font-size:25px;margin:0 0 4px;text-align:center}
+  .sub{text-align:center;color:#8a7a3a;font-weight:700;margin-bottom:6px}
+  .meta{text-align:center;font-size:11.5px;color:var(--muted);margin-bottom:22px}
+  h2{color:var(--g);font-size:16.5px;border-bottom:2.5px solid var(--gold);padding-bottom:6px;margin:26px 0 12px}
+  h2 .n{background:var(--g);color:#fff;border-radius:50%;width:25px;height:25px;display:inline-flex;align-items:center;justify-content:center;font-size:13px;margin-left:8px;vertical-align:middle}
+  h3{color:var(--g);font-size:14px;margin:16px 0 7px}
+  p{margin:7px 0}
+  code{background:#F1F6F3;border:1px solid var(--line);border-radius:5px;padding:1px 6px;font-family:ui-monospace,Consolas,monospace;font-size:11.5px;direction:ltr;display:inline-block}
+  pre{background:#0F2A1E;color:#DCEAE2;border-radius:10px;padding:13px 15px;font-family:ui-monospace,Consolas,monospace;font-size:11px;direction:ltr;text-align:left;overflow-wrap:anywhere;white-space:pre-wrap;line-height:1.7;margin:9px 0}
+  .box{border-radius:11px;padding:12px 15px;margin:12px 0;font-size:12.5px}
+  .tip{background:#F4F9F6;border-right:4px solid var(--g)}
+  .warn{background:#FFF9E8;border-right:4px solid var(--gold)}
+  .imp{background:#FDECEC;border-right:4px solid #C0392B}
+  ul,ol{margin:7px 20px 7px 0;padding:0}
+  li{margin-bottom:4px}
+  table{width:100%;border-collapse:collapse;margin:11px 0;font-size:12px}
+  th{background:var(--g);color:#fff;padding:8px 9px;text-align:right;font-size:12px}
+  td{border:1px solid var(--line);padding:7px 9px;vertical-align:top}
+  tr:nth-child(even) td{background:#F8FBF9}
+  .step{background:#fff;border:1.5px solid var(--line);border-radius:12px;padding:13px 15px;margin:11px 0}
+  .step b.t{color:var(--g);font-size:13.5px;display:block;margin-bottom:5px}
+  .pages{page-break-after:always}
+  .foot{text-align:center;font-size:11px;color:var(--muted);margin-top:26px;border-top:1px solid var(--line);padding-top:11px}
+  .kv{display:flex;gap:9px;align-items:flex-start;margin:4px 0}
+  .kv span.k{font-weight:800;color:var(--g);min-width:104px}
+</style>
+</head>
+<body>
+
+<h1>أثر — بوابة التطوع الذكية</h1>
+<div class="sub">دليل رفع الموقع على GitHub Pages</div>
+<div class="meta">خطوات مفصّلة خطوة بخطوة · بدون أي خبرة برمجية · الزمن المتوقع ١٠ دقائق</div>
+
+<h2><span class="n">١</span> ماذا سنحصل عليه؟</h2>
+<p>بعد تنفيذ الخطوات، سيكون لديك <b>رابط دائم مجاني</b> يعمل للأبد على GitHub، يفتح:</p>
+<table>
+  <tr><th>الصفحة</th><th>الرابط النهائي</th></tr>
+  <tr><td>الصفحة الرئيسية</td><td><code>https://USERNAME.github.io/athar-site/</code></td></tr>
+  <tr><td>تطبيق أثر (ويب)</td><td><code>https://USERNAME.github.io/athar-site/app/</code></td></tr>
+  <tr><td>تحميل تطبيق الأندرويد (APK)</td><td><code>https://USERNAME.github.io/athar-site/download/</code></td></tr>
+  <tr><td>سياسة الخصوصية</td><td><code>https://USERNAME.github.io/athar-site/privacy.html</code></td></tr>
+  <tr><td>الدعم والمساعدة</td><td><code>https://USERNAME.github.io/athar-site/support.html</code></td></tr>
+</table>
+<div class="box tip">
+  <b>💡 لماذا GitHub Pages؟</b> مجاني تمامًا، سرعته عالية، ولا يحتاج أي سيرفر أو صيانة. وهو نفس الرابط الذي ستستخدمه كـ <b>Privacy Policy URL</b> في Google Play.
+</div>
+
+<div class="box imp">
+  <b>🚨 اقرأ هذا أولاً — أكثر سببين يمنعان الموقع من العمل:</b>
+  <ol style="margin-top:7px">
+    <li><b>المستودع Private:</b> GitHub Pages المجاني يعمل مع المستودعات <b>العامة Public</b> فقط. لو مستودعك خاص سيعطي الرابط <b>404 دائماً</b> — حتى لو كل شيء آخر صحيح.</li>
+    <li><b>اسم المستودع في الرابط غير مطابق:</b> لازم تكتب الاسم <b>حرفياً</b> كما هو في GitHub (انتبه للشرطات <code>-</code> في آخر الاسم).</li>
+  </ol>
+  <p style="margin-top:7px">الحل بالتفصيل في القسم <b>«حلّ المشاكل»</b> أسفل هذا الدليل.</p>
+</div>
+
+<h2><span class="n">٢</span> الملفات التي سترفعها</h2>
+<p>فك ضغط الملف <code>athar-site-lite.zip</code> على جهازك، وستجد هذه المحتويات بالضبط:</p>
+<pre>index.html          الصفحة الرئيسية
+404.html            صفحة الخطأ
+.nojekyll           ملف مهم جدًا (مخفي، بدون نقطة محتوى)
+README.md           تعليمات مختصرة
+robots.txt
+sitemap.xml
+app/                تطبيق أثر (ويب كامل)
+download/           صفحة تحميل الأندرويد
+apk/                (فارغ في النسخة الخفيفة — سنرفع الـAPK لاحقًا)
+assets/             الأيقونات والشعارات
+vendor/qrcode.js    مكتبة رمز QR
+privacy.html        سياسة الخصوصية
+support.html        صفحة الدعم
+serve.sh            معاينة محلية (اختياري)
+deploy.sh           نشر تلقائي بأمر واحد (اختياري)
+</pre>
+<div class="box warn">
+  <b>⚠️ مهم جدًا:</b> ارسم <b>محتويات الفولدر</b> — يعني لازم يكون <code>index.html</code> في <b>جذر المستودع مباشرة</b>، وليس داخل مجلد آخر. لو رفعت الفولدر كامل، البوابة لن تعمل.
+</div>
+
+<div class="pages"></div>
+
+<h2><span class="n">٣</span> إنشاء المستودع على GitHub</h2>
+<div class="step">
+  <b class="t">١.٣ افتح صفحة إنشاء مستودع جديد</b>
+  <p>افتح الرابط: <code>https://github.com/new</code></p>
+</div>
+<div class="step">
+  <b class="t">٢.٣ املاً البيانات</b>
+  <div class="kv"><span class="k">Repository name</span><span><code>athar-site</code> (بالضبط بهذا الاسم، كل الحروف صغيرة)</span></div>
+  <div class="kv"><span class="k">Description</span><span>أثر — بوابة التطوع الذكية (اختياري)</span></div>
+  <div class="kv"><span class="k">Visibility</span><span><b>Public</b> ← إلزامي! المستودع الخاص لا يعمل عليه Pages المجاني</span></div>
+  <div class="kv"><span class="k">Initialize</span><span>اترك README و .gitignore و license <b>بدون</b> علامة صح</span></div>
+  <p>اضغط الزر الأخضر <b>Create repository</b>.</p>
+</div>
+
+<h2><span class="n">٤</span> رفع الملفات (الطريقة الأسهل)</h2>
+<div class="step">
+  <b class="t">١.٤ في صفحة المستودع الجديد</b>
+  <p>ستجد رابط في المنتصف اسمه <b>uploading an existing file</b> — اضغط عليه.<br>
+  (أو من القائمة العلوية: <b>Add file</b> ← <b>Upload files</b>)</p>
+</div>
+<div class="step">
+  <b class="t">٢.٤ اسحب الملفات</b>
+  <p>افتح مجلد الملفات المفكوكة، ثم:</p>
+  <ol>
+    <li>حدّد <b>كل</b> الملفات والمجلدات من داخل المجلد (اضغط <b>Ctrl+A</b>).</li>
+    <li>اسحبها وأفلتها في المستطيل الكبير في الصفحة.</li>
+    <li>انتظر حتى تظهر كل الملفات في القائمة (قد يأخذ دقيقة — الحجم ~14 ميجا).</li>
+  </ol>
+</div>
+<div class="step">
+  <b class="t">٣.٤ أكمل العملية</b>
+  <p>في خانة الوصف أسفل الصفحة اكتب: <code>Athar site</code></p>
+  <p>ثم اضغط الزر الأخضر <b>Commit changes</b>.</p>
+</div>
+<div class="box imp">
+  <b>🚨 تحقق من ملف .nojekyll:</b> بعض المتصفحات <b>لا ترفع</b> الملفات التي تبدأ بنقطة عبر السحب. بعد الـCommit، تأكد أن <code>.nojekyll</code> ظاهر في قائمة الملفات.<br><br>
+  <b>إن لم يظهر:</b> اضغط <b>Add file</b> ← <b>Create new file</b>، واكتب في خانة الاسم بالضبط: <code>.nojekyll</code> (اترك محتواه فارغًا تمامًا)، ثم اضغط Commit. <b>بدون هذا الملف لن يعمل الموقع بشكل صحيح.</b>
+</div>
+
+<div class="pages"></div>
+
+<h2><span class="n">٥</span> تفعيل GitHub Pages</h2>
+<div class="step">
+  <b class="t">١.٥ افتح الإعدادات</b>
+  <p>من القائمة العلوية في المستودع اضغط <b>Settings</b> (أعلى اليمين).</p>
+</div>
+<div class="step">
+  <b class="t">٢.٥ اختر Pages</b>
+  <p>من القائمة الجانبية اليسرى، انزل واضغط <b>Pages</b>.</p>
+</div>
+<div class="step">
+  <b class="t">٣.٥ اضبط الإعدادات</b>
+  <div class="kv"><span class="k">Source</span><span><b>Deploy from a branch</b></span></div>
+  <div class="kv"><span class="k">Branch</span><span><b>main</b> &nbsp;|&nbsp; <b>/ (root)</b></span></div>
+  <p>اضغط <b>Save</b>.</p>
+</div>
+<div class="box tip">
+  <b>⏳ انتظر ١ – ٣ دقائق.</b> بعدها حدّث الصفحة وستظهر رسالة خضراء:
+  <i>“Your site is live at https://USERNAME.github.io/athar-site/”</i> — اضغط عليها لفتح موقعك.
+</div>
+
+<h2><span class="n">٦</span> رفع ملف التطبيق (APK)</h2>
+<div class="box warn">
+  <b>ليش خطوة منفصلة؟</b> GitHub لا يقبل رفع ملف واحد أكبر من <b>25 ميجابايت</b> من المتصفح، وملف التطبيق حجمه <b>52.7 ميجابايت</b>. الحل: نرفعه في قسم <b>Releases</b> (وهو مسموح حتى 2 جيجابايت).
+</div>
+<div class="step">
+  <b class="t">١.٦ اذهب إلى Releases</b>
+  <p>من الصفحة الرئيسية للمستودع، في الشريط الجانبي الأيمن اضغط <b>Releases</b>.<br>
+  ثم اضغط <b>Draft a new release</b> (أو <b>Create a new release</b>).</p>
+</div>
+<div class="step">
+  <b class="t">٢.٦ اكتب وسم الإصدار</b>
+  <p>في خانة <b>Choose a tag</b> اكتب بالضبط: <code>v1.3.0</code> ثم اضغط <b>Create new tag</b>.</p>
+</div>
+<div class="step">
+  <b class="t">٣.٦ اكتب العنوان وأرفق الملف</b>
+  <p><b>Release title:</b> <code>أثر — الإصدار 1.3.0</code></p>
+  <p>ثم في قسم <b>Attach binaries</b> اسحب ملف <code>athar-1.3.0.apk</code> وأفلته، وانتظر حتى ينتهي الرفع (شريط تقدّم).</p>
+</div>
+<div class="step">
+  <b class="t">٤.٦ انشر الإصدار</b>
+  <p>اضغط <b>Publish release</b>. هكذا أصبح رابط التحميل المباشر:</p>
+  <pre>https://github.com/USERNAME/athar-site/releases/download/v1.3.0/athar-1.3.0.apk</pre>
+</div>
+<div class="box tip">
+  <b>✅ صفحة التحميل تتكيّف تلقائيًا:</b> صفحة <code>/download/</code> عندنا ذكية — بتجرّب الملف المحلي أولاً، وإذا ما لقيته بتحوّل تلقائيًا لرابط الإصدارات أعلاه. فبس تأكد أن اسم الحساب في الرابط يطابق حسابك.
+</div>
+
+<div class="pages"></div>
+
+<h2><span class="n">٧</span> هل يهم اسم المستودع؟</h2>
+<div class="box tip">
+  <b>لا، لا يهم إطلاقًا.</b> الحزمة مبنية لتعمل تحت أي اسم وأي نطاق:
+  <ul style="margin-top:6px">
+    <li>كل الروابط داخل الموقع <b>نسبية</b> (<code>app/</code> · <code>download/</code> · <code>../assets/</code>) — تعمل تحت أي مسار.</li>
+    <li>زر تحميل التطبيق <b>يستنتج</b> رابط الإصدارات تلقائيًا من رابط الصفحة نفسها.</li>
+  </ul>
+  مثال: لو اسم المستودع <code>athar-volunteer-</code> فالرابط <code>https://USERNAME.github.io/athar-volunteer-/</code> ويعمل مباشرة.
+  <br><br>
+  الاستثناء الوحيد: لو سمّيت المستودع بنفس اسم حسابك + <code>.github.io</code>. في هذه الحالة، اكتب الرابط يدويًا في المتغيّر <code>APK_URL_OVERRIDE</code> داخل <code>download/index.html</code>.
+</div>
+
+<h2><span class="n">٨</span> الربط مع Google Play</h2>
+<p>هذه الروابط هي التي ستلصقها في <b>Google Play Console</b> عند إنشاء صفحة المتجر:</p>
+<table>
+  <tr><th>الحقل في Play Console</th><th>الرابط</th></tr>
+  <tr><td>Store listing ← Privacy policy</td><td><code>https://USERNAME.github.io/athar-site/privacy.html</code></td></tr>
+  <tr><td>Store listing ← Website</td><td><code>https://USERNAME.github.io/athar-site/</code></td></tr>
+  <tr><td>Support ← Support URL</td><td><code>https://USERNAME.github.io/athar-site/support.html</code></td></tr>
+</table>
+
+<h2><span class="n">٩</span> الطريقة الاحترافية (اختياري — أمر واحد)</h2>
+<p>لو عندك <b>git</b> مثبّت على جهازك، تقدر تنشر كل شيء بأمر واحد من داخل المجلد المفكوك:</p>
+<pre>bash deploy.sh USERNAME</pre>
+<p>استبدل <code>USERNAME</code> باسم حسابك. السكربت تلقائيًا: يهيّئ git، يعمل Commit، ويرفع كل الملفات.<br>
+(سيُطلب منك اسم المستخدم وكلمة مرور — استخدم <b>Personal Access Token</b> بدل كلمة المرور.)</p>
+<div class="box tip">
+  <b>كيف تعمل Personal Access Token؟</b> GitHub ← صورتك ← Settings ← Developer settings ← Personal access tokens ← Tokens (classic) ← Generate new token ← اختر صلاحية <b>repo</b> ← انسخ الرمز والصقه مكان كلمة المرور.
+</div>
+
+<h2><span class="n">١٠</span> قائمة التحقق النهائية</h2>
+<table>
+  <tr><th>✓</th><th>التحقّق</th></tr>
+  <tr><td>☐</td><td>المستودع اسمه <code>athar-site</code> و<b>Public</b>.</td></tr>
+  <tr><td>☐</td><td><code>index.html</code> ظاهر في جذر المستودع (وليس داخل مجلد).</td></tr>
+  <tr><td>☐</td><td>ملف <code>.nojekyll</code> موجود.</td></tr>
+  <tr><td>☐</td><td>Settings ← Pages مفعّل على <code>main</code> / <code>/ (root)</code>.</td></tr>
+  <tr><td>☐</td><td>الصفحة الرئيسية تفتح وتظهر بالعربي من اليمين لليسار.</td></tr>
+  <tr><td>☐</td><td>زر «افتح التطبيق الآن» ينقل إلى <code>/app/</code> ويحمّل التطبيق.</td></tr>
+  <tr><td>☐</td><td>زر «حمّل التطبيق (APK)» يبدأ التنزيل فعلاً.</td></tr>
+  <tr><td>☐</td><td>رمز QR يظهر في صفحة التحميل.</td></tr>
+  <tr><td>☐</td><td>صفحة الخصوصية وصفحة الدعم تفتحان بدون خطأ.</td></tr>
+</table>
+
+<h2><span class="n">١١</span> حلّ المشاكل</h2>
+<table>
+  <tr><th>المشكلة</th><th>السبب والحل</th></tr>
+  <tr><td>الصفحة تفتح لكن التصميم بدون تنسيق</td><td>السبب غالبًا أن <code>index.html</code> ليس في الجذر. انقله للجذر أو أعد الرفع بشكل صحيح.</td></tr>
+  <tr><td><b>404 على كل الصفحات</b></td><td><b>السبب الأشهر:</b> المستودع <b>Private</b>. اذهب Settings → Danger Zone → <b>Change repository visibility</b> → <b>Change to public</b> ثم أعد تفعيل Pages. (Pages المجاني لا يعمل مع المستودعات الخاصة)</td></tr>
+  <tr><td>404 على كل الصفحات</td><td>اسم المستودع في الرابط غير مطابق. افتح <code>https://github.com/USERNAME?tab=repositories</code> وانسخ الاسم <b>حرفياً</b>.</td></tr>
+  <tr><td>تظهر رسالة “404 — File not found”</td><td>ملف <code>.nojekyll</code> ناقص. أنشئه كما في الخطوة ٤.</td></tr>
+  <tr><td>التطبيق <code>/app/</code> لا يفتح (شاشة فاضية)</td><td>مجلد <code>app/</code> لم يُرفع كاملاً. تأكد أن جوّاه <code>main.dart.js</code> و <code>flutter_bootstrap.js</code> و <code>canvaskit/</code>.</td></tr>
+  <tr><td>رمز QR ما يظهر</td><td>تأكد أن مجلد <code>vendor/</code> مرفوع ويحوي <code>qrcode.js</code>.</td></tr>
+  <tr><td>الرابط يعطي 404 لمدة طويلة</td><td>انتظر ٥ دقائق إضافية، وتأكد أن Pages مضبوط على <code>main</code> و <code>/ (root)</code> بالضبط.</td></tr>
+  <tr><td>زر التحميل يعطي خطأ</td><td>لم تنشر الإصدار في <b>Releases</b> بعد (الخطوة ٦).</td></tr>
+</table>
+
+<div class="foot">
+  أثر — بوابة التطوع الذكية · <span dir="ltr">com.atharvolunteer.portal · v1.3.0+4</span><br>
+  دليل النشر على GitHub Pages
+</div>
+
+</body>
+</html>

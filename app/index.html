@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <base href="./">
+
+  <meta charset="UTF-8">
+  <meta content="IE=Edge" http-equiv="X-UA-Compatible">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
+  <meta name="description" content="أثر — بوابة التطوع الذكية. اختر جمعيتك، تحدّث مع المرشد الذكي، واحصل على أفضل ٣ فرص تطوعية تناسبك في دقيقة. تطبيق مجاني للمتطوعين من عمر ١٥ سنة فأكثر.">
+  <meta name="keywords" content="تطوع, عمل تطوعي, فرص تطوعية, جمعيات خيرية, التطوع في السعودية, أثر, تطبيق تطوع">
+  <meta name="author" content="Athar — بوابة أثر للتطوع">
+  <meta name="theme-color" content="#0B4A2E">
+
+  <!-- Open Graph / social sharing -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="أثر — بوابة التطوع الذكية">
+  <meta property="og:description" content="مساعد ذكي يجد لك أفضل ٣ فرص تطوعية تناسبك في دقيقة.">
+  <meta property="og:image" content="icons/Icon-512.png">
+  <meta property="og:locale" content="ar_SA">
+
+  <!-- iOS meta tags & icons -->
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="أثر">
+  <link rel="apple-touch-icon" href="icons/Icon-192.png">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="favicon.png"/>
+  <link rel="icon" type="image/png" sizes="192x192" href="icons/Icon-192.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="icons/Icon-512.png">
+
+  <title>أثر — بوابة التطوع الذكية</title>
+  <link rel="manifest" href="manifest.json">
+
+  <style>
+    /* Branded loading splash — shown until Flutter paints its first frame. */
+    html, body { height: 100%; margin: 0; background: #0B4A2E; }
+    #athar-splash {
+      position: fixed; inset: 0; display: flex; flex-direction: column;
+      align-items: center; justify-content: center; gap: 18px;
+      background: linear-gradient(135deg, #0B4A2E, #072E1D);
+      font-family: 'Segoe UI', Tahoma, system-ui, sans-serif;
+      color: #fff; z-index: 9999; transition: opacity .4s ease;
+    }
+    #athar-splash img { width: 96px; height: 96px; border-radius: 24px;
+      box-shadow: 0 12px 40px rgba(0,0,0,.35); }
+    #athar-splash .t { font-size: 22px; font-weight: 800; letter-spacing: .5px; }
+    #athar-splash .s { font-size: 13px; opacity: .8; }
+    #athar-splash .spin { width: 34px; height: 34px; border-radius: 50%;
+      border: 3px solid rgba(201,162,39,.3); border-top-color: #C9A227;
+      animation: athar-spin .9s linear infinite; }
+    @keyframes athar-spin { to { transform: rotate(360deg); } }
+    #athar-splash.hidden { opacity: 0; pointer-events: none; }
+  </style>
+</head>
+<body>
+  <div id="athar-splash">
+    <img src="icons/Icon-192.png" alt="أثر" onerror="this.style.display='none'">
+    <div class="t">أثر</div>
+    <div class="s">بوابة التطوع الذكية</div>
+    <div class="spin"></div>
+  </div>
+
+  <script>
+    // Remove the splash once the Flutter engine has rendered its first frame.
+    window.addEventListener('flutter-first-frame', function () {
+      var el = document.getElementById('athar-splash');
+      if (el) { el.classList.add('hidden'); setTimeout(function(){ el.remove(); }, 450); }
+    });
+    // Safety net: never let the splash linger longer than 12s.
+    setTimeout(function () {
+      var el = document.getElementById('athar-splash');
+      if (el) { el.classList.add('hidden'); }
+    }, 12000);
+  </script>
+
+  <script src="flutter_bootstrap.js" async></script>
+</body>
+</html>

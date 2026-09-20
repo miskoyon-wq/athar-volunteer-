@@ -1,49 +1,10 @@
-# ── Flutter / Dart ──────────────────────────────────────────────────────────
-.dart_tool/
-.packages
-build/
-.flutter-plugins
-.flutter-plugins-dependencies
-*.iml
-
-# ── Android ─────────────────────────────────────────────────────────────────
-android/.gradle/
-android/app/build/
-android/build/
-android/local.properties
-android/key.properties
-android/release-key.jks
-*.jks
-*.keystore
-
-# ── IDE ─────────────────────────────────────────────────────────────────────
-.idea/
-.vscode/
-*.swp
-
-# ── Logs & temp ─────────────────────────────────────────────────────────────
-*.log
-*.tmp
-
-# ── Large generated bundles (shared via links, not the repo) ────────────────
-*.zip
-*.bundle
-
-# ── Backend secrets & data ──────────────────────────────────────────────────
-backend/athar.db
-backend/athar.db-shm
-backend/athar.db-wal
-backend/.env
-
-# ── OS ──────────────────────────────────────────────────────────────────────
+# System / editor
 .DS_Store
 Thumbs.db
-
-# ── Editor/backup leftovers ─────────────────────────────────────────────────
-*.bak
-*.orig
+*.swp
 *~
+.idea/
+.vscode/
 
-# ── Large derivable store screenshots (shipped inside store_assets.zip) ─────
-docs/store_package/screenshots/
-docs/store_screenshots/
+# لا نتجاهل ملفات الموقع نفسها
+!.nojekyll
