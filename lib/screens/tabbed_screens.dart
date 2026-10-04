@@ -9,8 +9,10 @@ import '../widgets/common.dart';
 
 const String kAdminPhoneDisplay = '0534211130';
 const String kAdminPhoneDial = 'tel:+966534211130';
-const String kPrivacyPolicyUrl = 'https://ithar-privacy.cyclic-rotate.workers.dev/';
-const String kAccountDeletionUrl = 'https://ithar-privacy.cyclic-rotate.workers.dev/delete-account';
+const String kPrivacyPolicyUrl =
+    'https://17239333-5ae7-444f-9068-be09e78caa60.vip.gensparksite.com/';
+const String kAccountDeletionUrl =
+    'https://17239333-5ae7-444f-9068-be09e78caa60.vip.gensparksite.com/delete-account';
 
 Future<void> _callAdmin() async {
   final uri = Uri.parse(kAdminPhoneDial);

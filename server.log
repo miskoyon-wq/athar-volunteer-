@@ -54,3 +54,6 @@
 10.64.92.16 - - [04/Oct/2026 11:13:47] "GET /assets/fonts/MaterialIcons-Regular.otf HTTP/1.1" 200 -
 10.64.92.16 - - [04/Oct/2026 11:13:47] "GET /assets/assets/fonts/IBMPlexSansArabic-Medium.ttf HTTP/1.1" 200 -
 10.64.92.16 - - [04/Oct/2026 11:13:48] "GET /assets/assets/images/ithar-mark.png HTTP/1.1" 200 -
+10.64.92.16 - - [04/Oct/2026 11:27:22] "HEAD / HTTP/1.1" 200 -
+10.64.92.16 - - [04/Oct/2026 11:27:23] "GET / HTTP/1.1" 200 -
+10.64.92.16 - - [04/Oct/2026 11:27:25] "GET /flutter_service_worker.js?v=3514974150 HTTP/1.1" 304 -
