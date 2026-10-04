@@ -4,19 +4,26 @@
 build/
 .flutter-plugins
 .flutter-plugins-dependencies
-**/*.g.dart
+*.iml
 
 # Android
 android/.gradle/
-android/app/debug/
-android/app/profile/
-android/app/release/
+android/app/build/
+android/local.properties
 android/key.properties
-android/*.jks
-android/*.keystore
-local.properties
+android/release-key.jks
+android/build/
 
 # IDE
 .idea/
 .vscode/
-*.iml
+
+# OS
+.DS_Store
+
+# Logs
+*.log
+
+# Local deploy tooling
+node_modules/
+.wrangler/
