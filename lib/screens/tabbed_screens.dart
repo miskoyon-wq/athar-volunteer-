@@ -9,8 +9,8 @@ import '../widgets/common.dart';
 
 const String kAdminPhoneDisplay = '0534211130';
 const String kAdminPhoneDial = 'tel:+966534211130';
-const String kPrivacyPolicyUrl = 'https://ithar.sa/privacy';
-const String kAccountDeletionUrl = 'https://ithar.sa/delete-account';
+const String kPrivacyPolicyUrl = 'https://ithar-privacy.cyclic-rotate.workers.dev/';
+const String kAccountDeletionUrl = 'https://ithar-privacy.cyclic-rotate.workers.dev/delete-account';
 
 Future<void> _callAdmin() async {
   final uri = Uri.parse(kAdminPhoneDial);
