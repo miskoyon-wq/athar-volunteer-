@@ -1,0 +1,63 @@
+name: ithar_volunteer
+description: "إيثار - التطوع الذكي | Smart volunteering app by ATAA (جمعية عطاء للخدمات المجتمعية)."
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.9.2
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_localizations:
+    sdk: flutter
+
+  cupertino_icons: ^1.0.8
+
+  # State management
+  provider: ^6.1.5+1
+
+  # Local storage (document DB)
+  hive: ^2.2.3
+  hive_flutter: ^1.1.0
+  shared_preferences: ^2.5.3
+
+  # Networking (AI guide + OTP backend)
+  http: ^1.5.0
+
+  # Utilities
+  intl: ^0.20.2
+  uuid: ^4.5.1
+  url_launcher: ^6.3.0
+  flutter_svg: ^2.0.10+1
+  path_provider: ^2.1.5
+
+  # Local notifications (mirror of FCM in production)
+  flutter_local_notifications: ^17.2.3
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  flutter_lints: ^5.0.0
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/images/
+
+  fonts:
+    - family: IBMPlexSansArabic
+      fonts:
+        - asset: assets/fonts/IBMPlexSansArabic-Regular.ttf
+          weight: 400
+        - asset: assets/fonts/IBMPlexSansArabic-Medium.ttf
+          weight: 500
+        - asset: assets/fonts/IBMPlexSansArabic-SemiBold.ttf
+          weight: 600
+        - asset: assets/fonts/IBMPlexSansArabic-Bold.ttf
+          weight: 700
+        - asset: assets/fonts/IBMPlexSansArabic-ExtraBold.ttf
+          weight: 800
